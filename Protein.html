@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Creates 5 columns */
+            grid-gap: 20px; /* Space between grid items */
+            max-width: 1000px;
+            margin: auto;
+        }
+        .grid-item {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 250px; /* Ensures consistent vertical spacing */
+            background-color: #fff; /* Adds a background color to each item */
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .grid-item img {
+            width: 150px; /* Fixed width */
+            height: 150px; /* Fixed height */
+            object-fit: contain; /* Ensures the entire image fits within the dimensions */
+            margin-bottom: 10px;
+        }
+        .grid-item p {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+            max-width: 800px;
+        }
+        .top-right-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown button {
+            padding: 12px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .dropdown button:hover {
+            background-color: #218838;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            border-radius: 5px;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .logout-button {
+            padding: 12px 20px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        .logout-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-right-buttons">
+        <div class="dropdown">
+            <button onclick="toggleDropdown()">Menu</button>
+            <div class="dropdown-content" id="dropdownContent">
+                <a href="Homepage.html">Home</a>
+                <a href="settings.html">Settings</a>
+            </div>
+        </div>
+        <button class="logout-button" onclick="window.location.href='index.html'">Logout</button>
+    </div>
+	<p><p>
+	Deliverbeat offers a variety of proteins, all processed and ready to cook. Choose from our selection to be delivered to your doorstep every month.
+	
+    <div class="grid-container">
+        <div class="grid-item">
+            
+            <img src="./assets/Ayam_Biasa.png" alt="Chicken">
+			<p>Chicken (1/2piece)</p>
+            <button onclick="window.location.href='https://farbeatsolutions.onpay.my/order/form/66'">Select</button>
+        </div>
+        <div class="grid-item">
+            
+            <img src="./assets/Ayam_Kak_Wok.png" alt="Diced Chicken">
+			<p>Diced Chicken(500g)</p>
+        </div>
+        <div class="grid-item">
+            
+            <img src="./assets/Dada_Ayam.png" alt="Chicken Breast">
+			<p>Chicken Breast(400g)</p>
+        </div>
+        <div class="grid-item">
+            
+            <img src="./assets/Peha_Ayam.png" alt="Chicken Thigh">
+			<p>Chicken Thigh(500g)</p>
+        </div>
+        <!-- Add more grid items below -->
+        <div class="grid-item">
+            
+            <img src="./assets/Kepak_Ayam.png" alt="Chicken Wings">
+			<p>Chicken Wings(500g)</p>
+        </div>
+        <div class="grid-item">
+            
+            <img src="./assets/Baby_Siakap.png" alt="Baby Barramundi">
+			<p>Baby Barramundi(1piece)</p>
+        </div>
+        <div class="grid-item">
+            
+            <img src="./assets/Ikan_Pelaling.png" alt="Mackerel">
+			<p>Mackerel(500g)</p>
+        </div>
+        <div class="grid-item">
+            
+            <img src="./assets/Ikan_Cencaru.png" alt="Torpedo Scad">
+			<p>Torpedo Scad(500g)</p>
+        </div>
+        <div class="grid-item">
+            
+            <img src="./assets/Ikan_Sardin.png" alt="Sardines">
+			<p>Sardines(500g)</p>
+        </div>
+        <div class="grid-item">
+            
+            <img src="./assets/Ikan_Selar_Kuning.png" alt="Yellowtail Scad">
+			<p>Yellowtail Scad(500g)</p>
+        </div>
+        <div class="grid-item">
+            
+            <img src="./assets/Ikan_Patin.png" alt="Cat Fish">
+			<p>Cat Fish(1kg)</p>
+        </div>
+        <div class="grid-item">
+            
+            <img src="./assets/Kerang.png" alt="Live Clams">
+			<p>Live Clams(400g)</p>
+        </div>
+        <div class="grid-item">
+            
+            <img src="./assets/Lala.png" alt="Cockles">
+			<p>Cockles(500g)</p>
+        </div>
+        <div class="grid-item">
+            
+            <img src="./assets/Daging_Tetel.png" alt="Tetel Beef">
+			<p>Tetel Beef - Local(500g)</p>
+        </div>
+        <div class="grid-item">
+            
+            <img src="./assets/Daging_Paru.png" alt="Beef Lungs">
+			<p>Beef Lungs - imported(500g)</p>
+        </div>
+    </div>
+    <h2>How It Works:<br>
+    1. Select Your Protein: Choose your preferred protein option each month.<p>
+    2. Delivery Schedule: We deliver your selected protein to your doorstep on a monthly basis.<p>
+    3. Enjoy Freshness: All proteins are processed and ready to cook for your convenience.</h2>
+
+    <h2>Cash Reward Option:<br>
+    If you choose not to receive protein, you can opt for a RM13 monthly cash reward, transferred directly to your bank account.</h2>
+
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("dropdownContent");
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            } else {
+                dropdown.style.display = "block";
+            }
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown button')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
